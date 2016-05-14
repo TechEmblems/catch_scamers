@@ -1,39 +1,56 @@
+<h1 class="page-header">Purchase Details</h1>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @purchase.user_id %>
-</p>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <tbody>
+    <tr>
+      <td><strong>User:</strong></td>
+      <td><%= @purchase.user_id %></td>
+    </tr>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @purchase.customer_id %>
-</p>
+    <tr>
+      <td><strong>Customer:</strong></td>
+      <td><%= @purchase.customer_id %></td>
+    </tr>
 
-<p>
-  <strong>Item name:</strong>
-  <%= @purchase.item_name %>
-</p>
+    <tr>
+      <td><strong>Item name:</strong></td>
+      <td><%= @purchase.item_name %></td>
+    </tr>
 
-<p>
-  <strong>Purchase date:</strong>
-  <%= @purchase.purchase_date %>
-</p>
+    <tr>
+      <td><strong>Item name:</strong></td>
+      <td><%= @purchase.item_name %></td>
+    </tr>
 
-<p>
-  <strong>Tenure:</strong>
-  <%= @purchase.tenure %>
-</p>
+    <tr>
+      <td><strong>Purchase date:</strong></td>
+      <td><%= @purchase.purchase_date %></td>
+    </tr>
 
-<p>
-  <strong>Last installment paid on:</strong>
-  <%= @purchase.last_installment_paid_on %>
-</p>
+    <tr>
+      <td><strong>Tenure:</strong></td>
+      <td><%= @purchase.tenure %></td>
+    </tr>
 
-<p>
-  <strong>Next installment due on:</strong>
-  <%= @purchase.next_installment_due_on %>
-</p>
+    <tr>
+      <td><strong>Last installment paid on:</strong></td>
+      <td><%= @purchase.last_installment_paid_on %></td>
+    </tr>
 
-<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
-<%= link_to 'Back', purchases_path %>
+    <tr>
+      <td><strong>Next installment due on:</strong></td>
+      <td><%= @purchase.next_installment_due_on %></td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <%= link_to 'Edit', edit_purchase_path(@purchase), :class=>'btn btn-success' %>
+        <%= link_to 'Back', purchases_path, :class=>'btn btn-default' %>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

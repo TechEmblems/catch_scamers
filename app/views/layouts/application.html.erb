@@ -2,15 +2,34 @@
 <html>
 <head>
   <title>CatachScamers</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+
+  <%= stylesheet_link_tag 'bootstrap.min', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'ie10-viewport-bug-workaround', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'dashboard', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'ie-emulation-modes-warning', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-<%= yield %>
-
+<%= render "layouts/navigation" %>
+<div class="container-fluid">
+  <div class="row">
+    <%= render "layouts/side_navigation" %>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <!--<p class="notice"><%= notice %></p>-->
+      <!--<p class="alert"><%= alert %></p>-->
+      <%= yield %>
+    </div>
+  </div>
+</div>
 </body>
 </html>

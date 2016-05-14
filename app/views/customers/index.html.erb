@@ -1,7 +1,8 @@
-<h1>Listing customers</h1>
+<h1 class="page-header">Listing customers</h1>
 
-<table>
-  <thead>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
     <tr>
       <th>First name</th>
       <th>Last name</th>
@@ -10,24 +11,25 @@
       <th>City</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
-
-  <tbody>
+    </thead>
+    <tbody>
     <% @customers.each do |customer| %>
-      <tr>
-        <td><%= customer.first_name %></td>
-        <td><%= customer.last_name %></td>
-        <td><%= customer.father_name %></td>
-        <td><%= customer.cnic %></td>
-        <td><%= customer.city %></td>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <tr>
+          <td><%= customer.first_name %></td>
+          <td><%= customer.last_name %></td>
+          <td><%= customer.father_name %></td>
+          <td><%= customer.cnic %></td>
+          <td><%= customer.city %></td>
+          <td><%= link_to 'Show', customer %></td>
+          <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+          <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
     <% end %>
-  </tbody>
-</table>
 
-<br>
+    </tbody>
+  </table>
+</div>
+
+
 
 <%= link_to 'New Customer', new_customer_path %>

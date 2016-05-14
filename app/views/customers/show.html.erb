@@ -1,29 +1,44 @@
+<h1 class="page-header">Customer Details</h1>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @customer.first_name %>
-</p>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td><strong>First name:</strong></td>
+        <td><%= @customer.first_name %></td>
+      </tr>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @customer.last_name %>
-</p>
+      <tr>
+        <td><strong>Last name:</strong></td>
+        <td><%= @customer.last_name %></td>
+      </tr>
 
-<p>
-  <strong>Father name:</strong>
-  <%= @customer.father_name %>
-</p>
+      <tr>
+        <td><strong>Father name:</strong></td>
+        <td><%= @customer.father_name %></td>
+      </tr>
 
-<p>
-  <strong>Cnic:</strong>
-  <%= @customer.cnic %>
-</p>
+      <tr>
+        <td><strong>CNIC:</strong></td>
+        <td><%= @customer.cnic %></td>
+      </tr>
 
-<p>
-  <strong>City:</strong>
-  <%= @customer.city %>
-</p>
+      <tr>
+        <td><strong>City:</strong></td>
+        <td><%= @customer.city %></td>
+      </tr>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+      <tr>
+        <td colspan="2">
+          <%= link_to 'Edit', edit_customer_path(@customer), :class=>'btn btn-success' %>
+          <%= link_to 'Back', customers_path, :class=>'btn btn-default' %>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+

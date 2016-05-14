@@ -11,35 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.number_field :user_id, :class=>'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :customer_id %><br>
-    <%= f.number_field :customer_id %>
+    <%= f.number_field :customer_id, :class=>'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :item_name %><br>
-    <%= f.text_field :item_name %>
+    <%= f.text_field :item_name, :class=>'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :purchase_date %><br>
-    <%= f.date_select :purchase_date %>
+    <%= f.date_select :purchase_date, :class=>'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :tenure %><br>
-    <%= f.text_field :tenure %>
+    <%= f.text_field :tenure, :class=>'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :last_installment_paid_on %><br>
-    <%= f.date_select :last_installment_paid_on %>
+    <%= f.date_select :last_installment_paid_on, :class=>'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :next_installment_due_on %><br>
-    <%= f.date_select :next_installment_due_on %>
+    <%= f.date_select :next_installment_due_on, :class=>'form-control' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="actions form-group">
+      <%= f.submit 'Save', :class=>'btn btn-success' %>
+      <% if !@purchase.new_record? %>
+          <%= link_to 'Show', @purchase, :class=>'btn btn-success' %>
+      <% end %>
+      <%= link_to 'Back', purchases_path, :class=>'btn btn-default' %>
+    </div>
 <% end %>

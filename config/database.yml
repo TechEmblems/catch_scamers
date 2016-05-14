@@ -14,7 +14,7 @@ development:
   database: catchscamers_development
   pool: 5
   username: postgres
-  password: password
+  password: root
   host: localhost
 
   # Connect on a TCP socket. Omitted by default since the client uses a
