@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+
   resources :installments
 
-  resources :purchases
+  resources :purchases do
+    get :autocomplete_customer_cnic, :on => :collection
+  end
 
   resources :customers
 

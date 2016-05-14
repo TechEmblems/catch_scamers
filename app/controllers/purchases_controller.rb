@@ -2,6 +2,7 @@ class PurchasesController < ApplicationController
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
+  autocomplete :customer, :cnic
 
   def index
     @purchases = Purchase.all
@@ -21,7 +22,9 @@ class PurchasesController < ApplicationController
   end
 
   def create
+    @customer_id = customer_id(purchase_params[:customer_id])
     @purchase = Purchase.new(purchase_params)
+    @purchase.customer_id = @customer_id
     @purchase.save
     respond_with(@purchase)
   end
@@ -43,5 +46,9 @@ class PurchasesController < ApplicationController
 
     def purchase_params
       params.require(:purchase).permit(:user_id, :customer_id, :item_name, :purchase_date, :tenure, :last_installment_paid_on, :next_installment_due_on)
+    end
+
+    def customer_id(cnic)
+      @customer = Customer.find_by(cnic: cnic).id
     end
 end

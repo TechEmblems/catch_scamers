@@ -12,16 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
     <%= f.label :customer_id %><br>
-    <%= f.number_field :customer_id %>
+    <%= f.autocomplete_field :customer_id, autocomplete_customer_cnic_purchases_path %>
   </div>
   <div class="field">
     <%= f.label :item_name %><br>
-    <%= f.text_field :item_name %>
+    <%= f.text_field :item_name %> #simple text field for now
   </div>
   <div class="field">
     <%= f.label :purchase_date %><br>
@@ -31,14 +27,14 @@
     <%= f.label :tenure %><br>
     <%= f.text_field :tenure %>
   </div>
-  <div class="field">
-    <%= f.label :last_installment_paid_on %><br>
-    <%= f.date_select :last_installment_paid_on %>
-  </div>
-  <div class="field">
-    <%= f.label :next_installment_due_on %><br>
-    <%= f.date_select :next_installment_due_on %>
-  </div>
+  <!--<div class="field">-->
+    <%#= f.label :last_installment_paid_on %><br>
+    <!--<%##= f.date_select :last_installment_paid_on %>-->
+  <!--</div>-->
+  <!--<div class="field">-->
+    <%#= f.label :next_installment_due_on %><br>
+    <!--<%##= f.date_select :next_installment_due_on %>-->
+  <!--</div>-->
   <div class="actions">
     <%= f.submit %>
   </div>
