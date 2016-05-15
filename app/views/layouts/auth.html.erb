@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CatachScamers</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+
+  <%= stylesheet_link_tag 'bootstrap.min', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'ie10-viewport-bug-workaround', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'dashboard', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'ie-emulation-modes-warning', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <!--<p class="notice"><%= notice %></p>-->
+      <!--<p class="alert"><%= alert %></p>-->
+      <%= yield %>
+    </div>
+  </div>
+</div>
+</body>
+</html>
