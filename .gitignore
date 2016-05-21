@@ -1,4 +1,13 @@
-.idea
+/.bundle
+/log/*.log
+/tmp
+/.idea/
+config/database.yml
+.rvmrc
+.ruby-gemset
+.ruby-version
+log/*
+/public/uploads
+/public/system
+
 Gemfile.lock
-log
-tmp
