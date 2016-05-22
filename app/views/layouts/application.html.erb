@@ -8,15 +8,16 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="favicon.ico">
-
-  <%= stylesheet_link_tag 'bootstrap.min', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'ie10-viewport-bug-workaround', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'dashboard', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!--<link rel="icon" href="favicon.ico">-->
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%#= stylesheet_link_tag 'bootstrap.min', 'data-turbolinks-track' => true %>
+  <%#= stylesheet_link_tag 'ie10-viewport-bug-workaround', 'data-turbolinks-track' => true %>
+  <%#= stylesheet_link_tag 'dashboard', 'data-turbolinks-track' => true %>
+  <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
   <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'ie-emulation-modes-warning', 'data-turbolinks-track' => true %>
+  <%#= javascript_include_tag 'ie-emulation-modes-warning', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>

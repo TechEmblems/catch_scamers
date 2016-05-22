@@ -16,8 +16,8 @@
     <%= f.number_field :user_id, :class=>'form-control' %>
   </div>
   <div class="field form-group">
-    <%= f.label :customer_id %><br>
-    <%= f.number_field :customer_id, :class=>'form-control' %>
+    <%= f.label :customer_cnic %><br>
+    <%= f.autocomplete_field :customer_cnic, autocomplete_customer_cnic_purchases_path, :class=>'form-control' %>
   </div>
   <div class="field form-group">
     <%= f.label :item_name %><br>
@@ -25,7 +25,7 @@
   </div>
   <div class="field form-group">
     <%= f.label :purchase_date %><br>
-    <%= f.date_select :purchase_date, :class=>'form-control' %>
+    <%= f.text_field :purchase_date, :class=>'form-control date-picker' %>
   </div>
   <div class="field form-group">
     <%= f.label :tenure %><br>
@@ -33,11 +33,11 @@
   </div>
   <div class="field form-group">
     <%= f.label :last_installment_paid_on %><br>
-    <%= f.date_select :last_installment_paid_on, :class=>'form-control' %>
+    <%= f.text_field :last_installment_paid_on, :class=>'form-control date-picker' %>
   </div>
   <div class="field form-group">
     <%= f.label :next_installment_due_on %><br>
-    <%= f.date_select :next_installment_due_on, :class=>'form-control' %>
+    <%= f.text_field :next_installment_due_on, :class=>'form-control date-picker' %>
   </div>
     <div class="actions form-group">
       <%= f.submit 'Save', :class=>'btn btn-success' %>

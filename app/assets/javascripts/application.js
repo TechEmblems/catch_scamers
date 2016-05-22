@@ -12,7 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
-//= require_tree .
-//= require jquery-ui/autocomplete
 //= require autocomplete-rails
+//= require_tree .
+
+$(document).on('page:change', function(event) {
+    $('.date-picker').datepicker();
+});

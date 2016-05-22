@@ -2,7 +2,7 @@ class PurchasesController < ApplicationController
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
-  autocomplete :customer, :cnic
+  autocomplete :customer, :cnic, full: false
 
   def index
     @purchases = Purchase.all

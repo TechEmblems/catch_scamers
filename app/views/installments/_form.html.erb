@@ -21,13 +21,13 @@
   </div>
   <div class="field form-group">
     <%= f.label :paid_on %><br>
-    <%= f.date_select :paid_on, :class=>'form-control' %>
+    <%= f.text_field :paid_on, :class=>'form-control date-picker' %>
   </div>
     <div class="actions form-group">
       <%= f.submit 'Save', :class=>'btn btn-success' %>
       <% if !@installment.new_record? %>
           <%= link_to 'Show', @installment, :class=>'btn btn-success' %>
       <% end %>
-      <%= link_to 'Back', @installment_path, :class=>'btn btn-default' %>
+      <%= link_to 'Back', installments_path, :class=>'btn btn-default' %>
     </div>
 <% end %>
